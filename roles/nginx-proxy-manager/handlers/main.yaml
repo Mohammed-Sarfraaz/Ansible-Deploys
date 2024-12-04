@@ -1,0 +1,6 @@
+---
+- name: Start npm
+  community.docker.docker_compose:
+    project_src: /home/ubuntu/docker-compose/npm
+    state: present
+    restarted: true
