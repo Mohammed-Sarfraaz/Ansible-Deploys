@@ -25,7 +25,6 @@ jobs:
          touch /home/runner/.ssh/sshkey
          echo -e "${{secrets.SSH_KEY}}" > /home/runner/.ssh/sshkey
          chmod 700 /home/runner/.ssh/sshkey
-         ssh-keyscan -t rsa,dsa,ecdsa,ed25519 ${{secrets.SSH_HOST}} >> /home/runner/.ssh/known_hosts
       - name: Run ansible script
         shell: bash 
         run: |
