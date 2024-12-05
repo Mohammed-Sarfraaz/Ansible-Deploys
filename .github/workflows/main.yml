@@ -30,6 +30,6 @@ jobs:
         shell: bash 
         run: |
           service ssh status
-          cd ansible-deploys
+          cd Ansible-Deploys/Ansible-Deploys
           cat playbook.yaml
           ansible-playbook -vvv --private-key /home/runner/.ssh/id_rsa -u ${{secrets.ANSIBLE_DEPLOY_USER}} -i inventory.yaml playbook.yaml
